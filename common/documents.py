@@ -8,7 +8,7 @@ def load_documents(file_paths):
         documents.extend(docs)
     return documents
 
-COMMON_DOCUMENTS = ["/Users/samuelzana/Desktop/dzidzai/dzidzai_api/app/common//English-Language-Syllabus-min.pdf"]
+COMMON_DOCUMENTS = ["/Users/samuelzana/Desktop/dzidzai/dzidzai_api/common//English-Language-Syllabus-min.pdf"]
 READING_DOCUMENTS = []
 WRITING_DOCUMENTS = []
 
