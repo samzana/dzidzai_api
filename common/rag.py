@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Retrieve the OpenAI API key from the environment variable
-openai_api_key = "sk-proj-LodAgWhfkausMszxzbAIT3BlbkFJFhGYAubsEoUbGyr40Rk7"
+openai_api_key = "sk-proj-QaFpaSHo5lv4JNMFlXz7T3BlbkFJBT8aPU009k89azRHKRbr"
 
 if not openai_api_key:
     raise ValueError("OpenAI API key not found. Please set it in the .env file or check the key.")
