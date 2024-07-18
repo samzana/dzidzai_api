@@ -1,5 +1,6 @@
 from langchain_community.document_loaders import PyPDFLoader
 
+import os
 def load_documents(file_paths):
     documents = []
     for file_path in file_paths:
@@ -8,7 +9,9 @@ def load_documents(file_paths):
         documents.extend(docs)
     return documents
 
-COMMON_DOCUMENTS = ["/Users/samuelzana/Desktop/dzidzai/dzidzai_api/common//English-Language-Syllabus-min.pdf"]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+syllabus_pdf_path = os.path.join(BASE_DIR, 'static', 'English-Language-Syllabus-min.pdf')
+COMMON_DOCUMENTS = [syllabus_pdf_path]
 READING_DOCUMENTS = []
 WRITING_DOCUMENTS = []
 
