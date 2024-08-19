@@ -9,3 +9,9 @@ class ReadingRequest(BaseModel):
 class ReadingResponse(BaseModel):
     grade: str 
     feedback: str 
+
+
+class SummaryRequest(BaseModel):
+    passage: List[str]
+    question: List[str]
+    response: str

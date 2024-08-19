@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException 
-from reading.services import grade_reading_response
-from reading.schemas import ReadingRequest, ReadingResponse
+from reading.services import grade_reading_response, grade_summary_response
+from reading.schemas import ReadingRequest, ReadingResponse, SummaryRequest
 
 router = APIRouter()
 
@@ -12,8 +12,22 @@ async def grade_reading(request: ReadingRequest):
             question=request.question,
             response=request.response
         )
-
         return ReadingResponse(
+            grade=result["answer"],
+            feedback=result["answer"]
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+@router.post("/summary")
+async def grade_summary(request: SummaryRequest):
+    try:
+        result = grade_summary_response(
+            passage=request.passage,
+            question=request.question,
+            response=request.response
+        )
+        return  ReadingResponse(
             grade=result["answer"],
             feedback=result["answer"]
         )
