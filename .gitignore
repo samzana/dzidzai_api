@@ -1,1 +1,5 @@
 .env
+env/
+__pycache__
+common/__pycache__/
+reading/__pycache__/
