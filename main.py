@@ -1,5 +1,6 @@
 from fastapi import FastAPI 
 from reading.router import router as reading_router
+from writing.router import router as writing_router
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -21,6 +22,7 @@ app.add_middleware(
 )
 
 app.include_router(reading_router, prefix="/reading", tags=["reading"])
+app.include_router(writing_router, prefix="/writing", tags=["writing"])
 
 @app.get("/")
 async def root():
