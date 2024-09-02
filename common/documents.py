@@ -14,6 +14,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 syllabus_pdf_path = os.path.join(BASE_DIR, 'static', 'English-Language-Syllabus-min.pdf')
 summary_pdf_path = os.path.join(BASE_DIR, 'static', 'Zimsec Exam Summary Section RAG Document.pdf')
 free_compositions_pdf_path = os.path.join(BASE_DIR, 'static', 'ZIMSEC Free Compositions.pdf')
+guided_compositions_pdf_path = os.path.join(BASE_DIR, 'static', 'ZIMSEC GUIDED COMPOSITION SECTION RAG DOCUMENT.pdf')
 
 COMMON_DOCUMENTS = [syllabus_pdf_path]
 SUMMARY_DOCUMENTS = [summary_pdf_path]
